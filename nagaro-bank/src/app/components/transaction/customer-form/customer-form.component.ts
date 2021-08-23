@@ -19,6 +19,9 @@ export class CustomerFormComponent implements OnInit {
   submitted = false;
   regionList: any=['Port Louis','Curepipe','Vacoas','Port Mathurin']
   currencyList:any=['AED','EUR','CHF','MUR','USD']
+    errorMessage: '';
+    hasErrors: boolean;
+    isSuccessful: boolean;
   
   constructor(
       private formBuilder: FormBuilder,
@@ -84,12 +87,17 @@ export class CustomerFormComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
+                this.isSuccessful = false;
                 //  this.alertService.success('Transaction successfully submited', { keepAfterRouteChange: true });
                   this.router.navigate(['/viewTransaction']);
+                  this.isSuccessful = true;
+                  this.hasErrors=false;
+                  
               },
               error => {
-                  //this.alertService.error(error);
+                  this.errorMessage =error.error.message;
                   this.loading = false;
+                  this.hasErrors = true;
               });
   }
 }

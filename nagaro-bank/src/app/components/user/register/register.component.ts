@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/user/auth.service';
+
 
 
 @Component({
@@ -15,6 +16,7 @@ export class RegisterComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
   userTypeList:any=['Admin','Normal']
+  private route: ActivatedRoute
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -27,7 +29,8 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
-        this.router.navigate(['']);
+        setTimeout(() => {
+          this.router.navigate(['../login'], { relativeTo: this.route }); }, 5000);
       },
       err => {
         this.errorMessage = err.error.message;

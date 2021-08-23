@@ -9,6 +9,7 @@
     </div>
     <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" routerLink="/register" routerLinkActive="active" *ngIf="!isLoggedIn">SignUp</a>
+            <a class="nav-item nav-link" routerLink="/login" routerLinkActive="active" *ngIf="!isLoggedIn">Login</a>
             <a class="nav-item nav-link" routerLink="/users/profile" routerLinkActive="active" *ngIf="isLoggedIn">{{user.username}}</a>
             <a class="nav-item nav-link" (click)="logout()" *ngIf="isLoggedIn">Logout</a>
     </div>
