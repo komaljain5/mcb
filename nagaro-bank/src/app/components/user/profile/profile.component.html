@@ -1,0 +1,11 @@
+
+<div class="col-md-6 offset-md-3 mt-5">
+    <h1>User details</h1>
+<table class="table table-striped" *ngIf="user != null">
+    <tbody>
+    <tr><label for="usename">Username: </label>   <span style="padding: 10%;"><b>{{user.username}}</b></span></tr>
+    <tr><label for="email">Email: </label>   <span style="padding: 10%;"><b>{{user.email}}</b></span></tr>
+    <tr><label for="role">Role: </label>   <span style="padding: 10%;"><b>{{user.roles[0]}}</b></span></tr>
+ </tbody>
+</table>
+</div>

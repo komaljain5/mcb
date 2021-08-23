@@ -1,0 +1,23 @@
+<h1>Transaction History</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <th scope="col" sortable="reference">Reference No.</th>
+            <th scope="col" sortable="customerName">Customer Name</th>
+            <th scope="col" sortable="amount">amount</th>
+            <th scope="col" sortable="currency">amount</th>
+            <th scope="col" sortable="beneficiaryACNumber">Beneficiary Account Number</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{transaction.reference}}</td>
+            <td>{{transaction.customerName}}</td>
+            <td>{{transaction.amount}}</td>
+            <td>{{transaction.currency}}</td>
+            <td>{{transaction.beneficiaryBank}}</td>            
+        </tr>
+    </tbody>
+</table>

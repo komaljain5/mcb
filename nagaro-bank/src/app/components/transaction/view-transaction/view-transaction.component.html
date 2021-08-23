@@ -1,0 +1,25 @@
+
+<div class="col-md-6 offset-md-3 mt-5">
+    <h1>Transaction details</h1>
+<table class="table table-striped" *ngIf="transaction != null">
+    <tbody>
+    <tr><label class="align" for="refid">Reference No.</label>   <span style="padding: 10%;"><b>{{transaction.reference}}</b></span></tr>
+    <tr><label class="align" for="customerNumber">CustomerNumber</label>   <span style="padding: 10%;"><b>{{transaction.customerNumber}}</b></span></tr>
+    <tr><label class="align" for="customerName">Customer Name</label>   <span style="padding: 10%;"><b>{{transaction.customerName}}</b></span></tr>
+    <tr><label class="align" for="customerAddress">Customer Address</label>   <span style="padding: 10%;"><b>{{transaction.customerAddress}}</b></span></tr>
+    <tr><label class="align" for="customerPhoneNumber">Customer Phone No</label>   <span style="padding: 10%;"><b>{{transaction.customerPhoneNumber}}</b></span></tr>
+    <tr><label class="align" for="amount">Amount</label>   <span style="padding: 10%;"><b>{{transaction.amount}}</b></span></tr>
+    <tr><label class="align" for="currency">Currency</label>   <span style="padding: 10%;"><b>{{transaction.currency}}</b></span></tr>
+    <tr><label class="align" for="beneficiaryBank">Beneficiary Bank</label>   <span style="padding: 10%;"><b>{{transaction.beneficiaryBank}}</b></span></tr>
+    <tr><label class="align" for="beneficiaryAccNo">Beneficiary Account No</label>   <span style="padding: 10%;"><b>{{transaction.beneficiaryACNumber}}</b></span></tr>
+    <tr><label class="align" for="paymentDetails">Payment Details</label>   <span style="padding: 10%;"><b>{{transaction.paymentDetails}}</b></span></tr>
+    <tr><label class="align" for="cardDetail">Card Details</label>   <span style="padding: 10%;"><b>{{transaction.cardDetail}}</b></span></tr>
+    <tr><label class="align" for="region">Region</label>   <span style="padding: 10%;"><b>{{transaction.region}}</b></span></tr>
+    <tr><label class="align" for="beneficiaryAccNo">Beneficiary Account No</label>   <span style="padding: 10%;"><b>{{transaction.beneficiaryACNumber}}</b></span></tr>
+</tbody>
+</table>
+</div>
+
+<div>
+    <a class="nav-item nav-link" routerLink="/transactions" routerLinkActive="active">Click Here to see all transactions History</a>
+</div>
